@@ -1,3 +1,10 @@
+const choix = [
+  { texte: "1 à 2 fois", valeur: "2" },
+  { texte: "3 à 5 fois", valeur: "4" },
+  { texte: "6 à 10 fois", valeur: "8" },
+  { texte: "Plus de 10 fois", valeur: "12" },
+];
+
 export default function Question1() {
   return (
     <main className="mx-auto max-w-xl px-5 pb-28 pt-8 sm:pt-16">
@@ -16,18 +23,16 @@ export default function Question1() {
       </h1>
 
       <ul className="mt-8 space-y-3">
-        {["1 à 2 fois", "3 à 5 fois", "6 à 10 fois", "Plus de 10 fois"].map(
-          (choix) => (
-            <li key={choix}>
-              <a
-                href="#"
-                className="block border border-encre px-4 py-4 text-lg font-semibold"
-              >
-                {choix}
-              </a>
-            </li>
-          )
-        )}
+        {choix.map((c) => (
+          <li key={c.valeur}>
+            <a
+              href={`/question-2?appels=${c.valeur}`}
+              className="block border border-encre px-4 py-4 text-lg font-semibold"
+            >
+              {c.texte}
+            </a>
+          </li>
+        ))}
       </ul>
     </main>
   );
