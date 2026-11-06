@@ -37,7 +37,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${titre.variable} ${corps.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className="mx-auto max-w-xl px-5 pb-28 pt-6 text-sm">
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 border-t border-encre pt-4">
+            <a href="/mentions-legales" className="underline">
+              Mentions légales
+            </a>
+            <a href="/cgv" className="underline">
+              CGV
+            </a>
+            <a href="/confidentialite" className="underline">
+              Confidentialité
+            </a>
+          </nav>
+        </footer>
+      </body>
     </html>
   );
 }
