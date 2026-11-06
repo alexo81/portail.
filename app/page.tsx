@@ -33,7 +33,7 @@ export default function Accueil() {
       </p>
 
       <a
-        href="#"
+        href="/question-1"
         className="mt-8 hidden items-center justify-center bg-signal px-6 py-4 text-lg font-semibold text-white sm:inline-flex"
       >
         Commencer, c&rsquo;est gratuit
@@ -63,7 +63,7 @@ export default function Accueil() {
 
       <div className="fixed inset-x-0 bottom-0 border-t border-encre bg-papier p-3 sm:hidden">
         <a
-          href="#"
+          href="/question-1"
           className="flex w-full items-center justify-center bg-signal px-6 py-4 text-lg font-semibold text-white"
         >
           Commencer, c&rsquo;est gratuit
